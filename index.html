@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Marcellus+SC&family=Montserrat&display=swap" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet"> 
+
+
+    <title>Amaury Fauvel - Portfolio</title>
+
+</head>
+
+<body>
+  <main role="main">
+    <div class="jumbotron text-center text-white rounded-0 bg-grad">
+        <h1 class="display-4 font1">Amaury Fauvel</h1>
+        <p class="lead">Étudiant de master programmation de jeux-vidéo, </p>
+        <hr class="my-4">
+        <p>It uses utility classes typography and spacing to space content out within the larger container.</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </p>
+    </div>
+
+
+  <div class="album">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-6 col-xl-4">
+          <div class="card mb-4 shadow zoom">
+            <h5 class="card-header card-title">
+              Rambarde
+            </h5>
+            <img class="card-img border border-dark" src="/rambarde/thumbnail.jpg"></img>
+            <div class="card-body">
+              <p class="card-text">
+                Un jeu mêlant RPG en tour par tour et jeu de rythme. Projet étudiant regroupant 18 membres sur 3 mois.
+                <br/><i class="text-muted float-right">Unity, C#</i>
+              </p>
+              <a href="/rambarde" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4" >
+          <div class="card mb-4 shadow zoom" onmouseenter="enterGif(0)" onmouseout="exitGif(0)">
+            <h5 class="card-header card-title">
+              Parallax
+            </h5>
+            <img class="card-img border border-dark gif-hover" src="/parallax/thumbnail.jpg"></img>
+            <img class="card-img border border-dark gif-hover d-none" src="/parallax/thumbnail.gif"></img>
+            <div class="card-body">
+              <p class="card-text">
+                Un prototype d'effet 3D utilisant un face tracker. Survoler avec la souris pour voir l'animation.
+                <br/><i class="text-muted float-right">Unity, C#, OpenCV</i>
+              </p>
+              <a href="/parallax" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4">
+          <div class="card mb-4 shadow zoom">
+            <h5 class="card-header card-title">
+              Raytracer
+            </h5>
+            <img class="card-img border border-dark" src="/raytracer/thumbnail.jpg"></img>
+            <div class="card-body">
+              <p class="card-text">
+                Un moteur de raytracing pour la synthèse d'images. Simulation physique des rayons de lumière.
+                <br/><i class="text-muted float-right">C++</i>
+              </p>
+              <a href="/raytracer" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4">
+          <div class="card mb-4 shadow zoom">
+            <h5 class="card-header card-title">
+              A.S.P.E
+            </h5>
+            <img class="card-img border border-dark" src="/aspe/thumbnail.jpg"></img>
+            <div class="card-body">
+              <p class="card-text">
+                Un moteur de jeu 2D implémentant tilemap, spritesheet, et render distance pour des grands niveaux.
+                <br/><i class="text-muted float-right">C++, SFML</i>
+              </p>
+              <a href="/aspe" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4">
+          <div class="card mb-4 shadow zoom">
+            <h5 class="card-header card-title">
+              Augmented Model Visit
+            </h5>
+            <img class="card-img border border-dark" src="/augmented_model_visit/thumbnail.jpg"></img>
+            <div class="card-body">
+              <p class="card-text">
+                Une maquette interactive pour la visite virtuelle d'un futur bâtiment. Hackathon sur le thème de l'urbanisme.
+                <br/><i class="text-muted float-right">Unity, C#, OpenCV</i>
+              </p>
+              <a href="/augmented_model_visit" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4">
+          <div class="card mb-4 shadow zoom">
+            <h5 class="card-header card-title">
+              Vision 3D d'imagerie médicale
+            </h5>
+            <img class="card-img border border-dark" src="/vision_3d/thumbnail.jpg"></img>
+            <div class="card-body">
+              <p class="card-text">
+                Une application permettant de visualiser une reconstruction d'image médicale en 3D sans lunettes.
+                <br/><i class="text-muted float-right">Javascript, Node</i>
+              </p>
+              <a href="/vision_3d" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4">
+          <div class="card mb-4 shadow zoom">
+            <h5 class="card-header card-title">
+              Game Jams
+            </h5>
+            <img class="card-img border border-dark" src="/game_jam/thumbnail.jpg"></img>
+            <div class="card-body">
+              <p class="card-text">
+                Deux jeux réalisés en 2 et 3 jours. Un jeu d'arcade (1 contre 1) et un puzzle platformer.
+                <br/><i class="text-muted float-right">Unity, C#</i>
+              </p>
+              <a href="/game_jam" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4">
+          <div class="card mb-4 shadow zoom">
+            <h5 class="card-header card-title">
+              Plateforme Agora
+            </h5>
+            <img class="card-img border border-dark" src="/agora/thumbnail.jpg"></img>
+            <div class="card-body">
+              <p class="card-text">
+                Une plateforme web de jeux de sociétés avec parties en différé (état de la partie stocké en base de données).
+                <br/><i class="text-muted float-right">PHP, Symfony, Javascript<i>
+              </p>
+              <a href="/agora" class="stretched-link"></a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+</main>
+</body>
+
+<script type="text/javascript">
+
+var gifs = document.getElementsByClassName("gif-hover");
+function enterGif(n) {
+  let i = n*2;
+  gifs[i].classList.add("d-none");
+  gifs[i+1].classList.remove("d-none");
+}
+function exitGif(n) {
+  let i = n*2;
+  gifs[i+1].classList.add("d-none");
+  gifs[i].classList.remove("d-none");
+}
+</script>
+
+</html>

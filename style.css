@@ -1,0 +1,73 @@
+.zoom {
+  transition: transform .3s; /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(1.07);
+}
+
+@media (min-width: 1500px) {
+    .container{
+        max-width: 1480px;
+    }
+}
+
+.font1, .card-title, h1, h2, h3 {
+	font-family: 'Marcellus SC', serif;
+}
+
+body {
+	font-family: 'Marcellus', serif;
+	background: #f0eceb;
+	overflow-x: hidden;
+}
+
+.bg-grad-r, .bg-grad {
+	background-image: linear-gradient(to right, #0f1e36, #272f45, #3d4155, #535565, #696976);
+}
+
+.bg-grad-b {
+	background-image: linear-gradient(to bottom, #0f1e36, #272f45, #3d4155, #535565, #696976);
+}
+
+.banner {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0;
+  margin: -7px;
+  filter: blur(4px);
+}
+@media (min-width: 768px) {
+.banner {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.sidebar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  max-height: 100%; z-index: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+article p {
+  padding-left: 30px;
+}
+
+.btn-icon {
+	border-radius: 5px;
+	padding-left: 0 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
