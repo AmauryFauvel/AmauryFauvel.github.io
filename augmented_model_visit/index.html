@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Marcellus+SC&family=Montserrat&display=swap" rel="stylesheet">
+
+    <link href="../style.css" rel="stylesheet">
+
+    <title>Amaury Fauvel - Portfolio</title>
+
+</head>
+
+<body>
+	<main>
+
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="sidebar col-lg-2 col-md-3 px-1 bg-grad-b position-fixed d-none d-md-block h-100 pre-scrollable border-right border-dark">
+          <div class="album py-4">
+
+                <div class="card mb-3 mx-3 shadow-lg zoom bg-light" id="top">
+                  <img class="card-img-top pt-1 px-1" src="/rambarde/thumbnail.jpg"/>
+                    <div class="pl-xl-4 pl-lg-2 pl-md-4 pt-2">
+                      <h5 class="card-title mb-2">Rambarde</h5>
+                      <a href="/rambarde" class="stretched-link"></a>
+                    </div>
+                </div>
+
+                <div class="card mb-3 mx-3 shadow-lg zoom bg-light" onmouseenter="enterGif(0)" onmouseout="exitGif(0)">
+                  <img class="card-img-top pt-1 px-1 gif-hover" src="/parallax/thumbnail.jpg"/>
+                  <img class="card-img-top pt-1 px-1 gif-hover d-none" src="/parallax/thumbnail.gif"/>
+                    <div class="pl-xl-4 pl-lg-2 pl-md-4 pt-2">
+                      <h5 class="card-title mb-2">Parallax</h5>
+                      <a href="/parallax" class="stretched-link"></a>
+                    </div>
+                </div>                
+
+                <div class="card mb-3 mx-3 shadow-lg zoom bg-light">
+                  <img class="card-img-top pt-1 px-1" src="/raytracer/thumbnail.jpg"/>
+                    <div class="pl-xl-4 pl-lg-2 pl-md-4 pt-2">
+                      <h5 class="card-title mb-2">Raytracer</h5>
+                      <a href="/raytracer" class="stretched-link"></a>
+                    </div>
+                </div>
+
+                <div class="card mb-3 mx-3 shadow-lg zoom bg-light">
+                  <img class="card-img-top pt-1 px-1" src="/aspe/thumbnail.jpg"/>
+                    <div class="pl-xl-4 pl-lg-2 pl-md-4 pt-2">
+                      <h5 class="card-title mb-2">A.S.P.E</h5>
+                      <a href="/aspe" class="stretched-link"></a>
+                    </div>
+                </div>
+
+                <div class="card mb-3 mx-3 shadow-lg zoom bg-light">
+                  <img class="card-img-top pt-1 px-1" src="/vision_3d/thumbnail.jpg"/>
+                    <div class="pl-xl-4 pl-lg-2 pl-md-4 pt-2">
+                      <h5 class="card-title mb-2">Vision 3D d'imagerie médicale</h5>
+                      <a href="/vision_3d" class="stretched-link"></a>
+                    </div>
+                </div>
+
+                <div class="card mb-3 mx-3 shadow-lg zoom bg-light">
+                  <img class="card-img-top pt-1 px-1" src="/game_jam/thumbnail.jpg"/>
+                    <div class="pl-xl-4 pl-lg-2 pl-md-4 pt-2">
+                      <h5 class="card-title mb-2">Game Jams</h5>
+                      <a href="/game_jam" class="stretched-link"></a>
+                    </div>
+                </div>
+
+                <div class="card mb-3 mx-3 shadow-lg zoom bg-light" id="bottom">
+                  <img class="card-img-top pt-1 px-1" src="/agora/thumbnail.jpg"/>
+                    <div class="pl-xl-4 pl-lg-2 pl-md-4 pt-2">
+                      <h5 class="card-title mb-2">Plateforme Agora</h5>
+                      <a href="/agora" class="stretched-link"></a>
+                    </div>
+                </div>
+
+          </div>
+        </div>
+
+
+
+        <div class="col offset-lg-2 offset-md-3 pl-0 pr-0" id="main">
+
+          <div style="overflow: hidden;" class="border-bottom border-dark">
+              <div class="banner" style="background-image: url('thumbnail.jpg');"></div>
+          </div>
+
+          <div class="row pt-5">
+
+            <div class="col col-xl-1">
+            </div>
+
+            <article class="col-10 col-xl-9 col-md-10 col-sm-10 col-xs-10 text-justify">
+              
+              <h1>Augmented Model Visit</h1>
+
+                <p>
+                  Comment visiter un bâtiment qui n'est pas encore construit ? C'est la question à laquelle ce projet (réalisé en binôme) propose une réponse. Grâce à notre dispositif, le public peut se déplacer virtuellement dans le modèle 3D d'un édifice grâce à un contrôle intuitif : la maquette architecurale de ce bâtiment.
+                </p>
+
+                <p>
+                  L'école urbaine de Lyon a organisé une semaine d'ateliers, débats et conférences autours de l'urbanisme : <strong>l'École de l'Anthropocène</strong>. Pendant toute la durée de cette semaine se déroulait un hackathon regroupant des étudiants et chercheurs de divers cursus (architecture, urbanisme, géographie, data science et jeux-vidéo). Le but était de proposer une expérience basée sur la maquette architecturale d'un futur bâtiment du campus de Bron afin de communiquer sur le projet.
+                </p>
+
+                
+
+                <p><a href="#tech" class="pl-0 py-0 btn btn-icon btn-outline-info btn-sm ml-3">
+                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-down-square-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 5a.5.5 0 0 0-1 0v4.793L5.354 7.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 9.793V5z"/>
+                </svg>
+                Aller directement à la partie technique</a></p>
+
+                <h2>Le maquette augmentée / Le principe</h2>
+
+                <p>
+                  La maquette a un toit plat et blanc, sur lequel nous projettons le plan d'un étage meublé. Sur ce toit est disposé un marqueur coloré, que l'utilisateur est invité à déplacer àa sa guise. À côte se trouve un grand écran montrant une vue 3D de l'intérieur du bâtiment, à l'endroit correspondant au positionnement du marqueur.
+                </p>
+                
+                <div class="my-3 pl-5 pr-4">
+                  <img src="thumbnail.jpg" class="img-fluid border border-dark rounded"/>
+                  <p class="text-center pr-5"><small class="text-muted">La maquette augmentée en utilisation</small></p>
+                </div>
+                
+                <p>
+                  bla bla bla...
+                </p>
+
+                <div class="my-3 pl-5 pr-4 text-center">
+                  <img src="overview.jpg" class="img-fluid border border-dark rounded"/>
+                  <p class="text-center pr-5"><small class="text-muted">Écran de séléction des mélodies</small></p>
+                </div>
+                
+
+                <h2 id="tech">La partie technique</h2>
+
+                <p>
+                  Deux appareils sont fixés au dessus de la maquette : un projecteur pour afficher le plan d'un étage sur le dessus de la maquette, et une caméra pour capturer la position du marqueur.
+                </p>
+
+                <p>
+                  Pour détecter le marqueur et sa position, nous utilisons la bibliothèque EmguCV : un wrapper d'OpenCV pour C# (dont Unity). Le contour du marqueur est repéré grâce à une détection de seuil HSV. La position du centre est ensuite transformée vers le système de coordonnées de Unity avec une matrice de projection et un changement de repère. Enfin, la caméra est déplacée fluidement (interpolation linéaire) vers sa nouvelle position pour correspondre à l'emplacement du marqueur.
+                </p>              
+
+                <p>
+                  Travaillant avec un temps et des ressources limitées, le seul modèle 3D du bâtiment auquel nous avions accès n'avait pas de texture, et des normales parallèles rendant le visuel peu lisible. Nous avons donc choisi de lui appliquer un shader affichant le contours des polygones. Le rendu est peu réaliste mais rend le bâtiment lisible, et ça a renforcé le côté "maquette".
+                </p>
+                
+
+                
+                <h3>Liens</h3>
+
+                <p>
+                  <a href="https://github.com/RymOUENZAR/Augmented-Model-Visit" target="_blank" class="btn btn-outline-primary">Github</a>
+                  
+                </p>
+                
+
+            </article>
+
+            <div class="col">
+            </div>
+          </div>
+
+          
+      </div>
+    </div>
+
+
+
+</main>
+</body>
+
+<script type="text/javascript">
+
+var gifs = document.getElementsByClassName("gif-hover");
+function enterGif(n) {
+  let i = n*2;
+  gifs[i].classList.add("d-none");
+  gifs[i+1].classList.remove("d-none");
+}
+function exitGif(n) {
+  let i = n*2;
+  gifs[i+1].classList.add("d-none");
+  gifs[i].classList.remove("d-none");
+}
+
+</script>
+
+</html>

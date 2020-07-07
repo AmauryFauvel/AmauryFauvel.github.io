@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Marcellus+SC&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="../style.css" rel="stylesheet">
+
+    <title>Amaury Fauvel - Portfolio</title>
+
+</head>
+
+<body>
+  <main>
+
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="sidebar col-lg-2 col-md-3 px-1 bg-grad-b position-fixed d-none d-md-block h-100 pre-scrollable border-right border-dark">
+          <div class="album py-4">
+
+                <div class="card mb-3 mx-3 shadow-lg zoom bg-light" id="top">
+                  <img class="card-img-top pt-1 px-1" src="/rambarde/thumbnail.jpg"/>
+                    <div class="pl-xl-4 pl-lg-2 pl-md-4 pt-2">
+                      <h5 class="card-title mb-2">Rambarde</h5>
+                      <a href="/rambarde" class="stretched-link"></a>
+                    </div>
+                </div>
+
+                <div class="card mb-3 mx-3 shadow-lg zoom bg-light" onmouseenter="enterGif(0)" onmouseout="exitGif(0)">
+                  <img class="card-img-top pt-1 px-1 gif-hover" src="/parallax/thumbnail.jpg"/>
+                  <img class="card-img-top pt-1 px-1 gif-hover d-none" src="/parallax/thumbnail.gif"/>
+                    <div class="pl-xl-4 pl-lg-2 pl-md-4 pt-2">
+                      <h5 class="card-title mb-2">Parallax</h5>
+                      <a href="/parallax" class="stretched-link"></a>
+                    </div>
+                </div>                
+
+                <div class="card mb-3 mx-3 shadow-lg zoom bg-light">
+                  <img class="card-img-top pt-1 px-1" src="/raytracer/thumbnail.jpg"/>
+                    <div class="pl-xl-4 pl-lg-2 pl-md-4 pt-2">
+                      <h5 class="card-title mb-2">Raytracer</h5>
+                      <a href="/raytracer" class="stretched-link"></a>
+                    </div>
+                </div>
+
+                <div class="card mb-3 mx-3 shadow-lg zoom bg-light">
+                  <img class="card-img-top pt-1 px-1" src="/aspe/thumbnail.jpg"/>
+                    <div class="pl-xl-4 pl-lg-2 pl-md-4 pt-2">
+                      <h5 class="card-title mb-2">A.S.P.E</h5>
+                      <a href="/aspe" class="stretched-link"></a>
+                    </div>
+                </div>
+
+                <div class="card mb-3 mx-3 shadow-lg zoom bg-light">
+                  <img class="card-img-top pt-1 px-1" src="/vision_3d/thumbnail.jpg"/>
+                    <div class="pl-xl-4 pl-lg-2 pl-md-4 pt-2">
+                      <h5 class="card-title mb-2">Vision 3D d'imagerie médicale</h5>
+                      <a href="/vision_3d" class="stretched-link"></a>
+                    </div>
+                </div>
+
+                <div class="card mb-3 mx-3 shadow-lg zoom bg-light">
+                  <img class="card-img-top pt-1 px-1" src="/game_jam/thumbnail.jpg"/>
+                    <div class="pl-xl-4 pl-lg-2 pl-md-4 pt-2">
+                      <h5 class="card-title mb-2">Game Jams</h5>
+                      <a href="/game_jam" class="stretched-link"></a>
+                    </div>
+                </div>
+
+                <div class="card mb-3 mx-3 shadow-lg zoom bg-light" id="bottom">
+                  <img class="card-img-top pt-1 px-1" src="/agora/thumbnail.jpg"/>
+                    <div class="pl-xl-4 pl-lg-2 pl-md-4 pt-2">
+                      <h5 class="card-title mb-2">Plateforme Agora</h5>
+                      <a href="/agora" class="stretched-link"></a>
+                    </div>
+                </div>
+
+          </div>
+        </div>
+
+
+
+        <div class="col offset-lg-2 offset-md-3 pl-0 pr-0" id="main">
+
+          <div style="overflow: hidden;" class="border-bottom border-dark">
+              <div class="banner" style="background-image: url('thumbnail.jpg');"></div>
+          </div>
+
+          <div class="row pt-5">
+
+            <div class="col col-xl-1">
+            </div>
+
+            <article class="col-10 col-xl-9 col-md-10 col-sm-10 col-xs-10 text-justify">
+              
+              <h1>Parallax</h1>
+
+                <p>
+                  Ce prototype montre qu'il est possible d'obtenir un effet 3D en changeant le point de vue de la caméra selon la position des yeux d'une personne devant l'écran. 
+                </p>
+
+                <p>
+                  Le prototype est composé de deux scènes : une simple démonstration comprenant des objets à différentes distances, dont certains qui "sortent" de l'écran, et une scène mini-jeu. Dans le mini-jeu, le joueur doit faire varier son point de vue pour aligner certains objets et former des lettres pour découvrir le mot caché.
+                </p>
+
+                <div class="mb-3 pl-5 pr-4 text-center" onclick="toggleGif()">
+                  <br/>
+                  <img src="thumbnail.gif" class="img-fluid border border-dark rounded gif-click"/>
+                  <img src="thumbnail.jpg" class="img-fluid border border-dark rounded d-none gif-click"/>
+                  <p class="text-center pr-5">
+                    <i class="fa px-2 btn btn-secondary fa-pause" aria-hidden="true" style=""></i>
+                    <small class="text-muted">Un gif vaut mieux qu'un long discours</small>
+                    
+                  </p>
+                </div>
+
+                <h2 id="tech">La partie technique</h2>
+
+                <p>
+                  Le parallaxe est l'effet du changement de position de l'observateur sur ce qu'il perçoit. En d'autres termes, les objets qui sont au loin se déplacent plus vite que les objets proches. C'est un des effets qui nous permet de percevoir la 3D. Avec la stéréoscopie (les deux yeux voient une image légerement décalée), ce sont les seuls effets manquant à un écran plat pour imiter la 3D du monde réel.
+                </p>
+
+                <p>
+                  Dans ce protoype, la caméra dans Unity a un frustum bien particulier permettant d'avoir toujours la même zone en visuel. En déplaçant le point de vue en même temps que le visage de la personne devant l'écran, on obtient un effet assez convaincant de parallaxe. Pour la détection et le tracking du visage, nous avons utilisé la bibliothèque EmguCV, un wrapper d'OpenCV pour le C#. Pour filmer une démonstration, il a suffit de remplacer le face-tracking par un tracking se basant sur la couleur de mon téléphone portable.
+                </p>
+
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe  src="https://www.youtube.com/embed/B_UIfFA77pk?start=33" allowfullscreen></iframe>
+                </div>
+
+                
+                <h3>Liens</h3>
+
+                <p>
+                  <a href="https://github.com/amauryfauvel/parallax" target="_blank" class="btn btn-outline-primary">Github</a>
+                  
+                </p>
+                
+
+            </article>
+
+            <div class="col">
+            </div>
+          </div>
+
+          
+      </div>
+    </div>
+
+
+
+</main>
+</body>
+
+<script type="text/javascript">
+
+var gifs = document.getElementsByClassName("gif-hover");
+function enterGif(n) {
+  let i = n*2;
+  gifs[i].classList.add("d-none");
+  gifs[i+1].classList.remove("d-none");
+}
+function exitGif(n) {
+  let i = n*2;
+  gifs[i+1].classList.add("d-none");
+  gifs[i].classList.remove("d-none");
+}
+
+var isPlaying = true;
+function toggleGif() {
+  if (isPlaying) {
+    document.getElementsByClassName("gif-click")[0].classList.add("d-none");
+    document.getElementsByClassName("gif-click")[1].classList.remove("d-none");
+
+    document.getElementsByClassName("fa-pause")[0].classList.add("fa-play");
+    document.getElementsByClassName("fa-play")[0].classList.remove("fa-pause");
+
+    isPlaying = false;
+  } else {
+    document.getElementsByClassName("gif-click")[1].classList.add("d-none");
+    document.getElementsByClassName("gif-click")[0].classList.remove("d-none");
+
+    document.getElementsByClassName("fa-play")[0].classList.add("fa-pause");
+    document.getElementsByClassName("fa-pause")[0].classList.remove("fa-play");
+
+    isPlaying = true;
+  }
+}
+
+</script>
+
+</html>
