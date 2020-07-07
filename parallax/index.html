@@ -32,16 +32,7 @@
                       <h5 class="card-title mb-2">Rambarde</h5>
                       <a href="/rambarde" class="stretched-link"></a>
                     </div>
-                </div>
-
-                <div class="card mb-3 mx-3 shadow-lg zoom bg-light" onmouseenter="enterGif(0)" onmouseout="exitGif(0)">
-                  <img class="card-img-top pt-1 px-1 gif-hover" src="/parallax/thumbnail.jpg"/>
-                  <img class="card-img-top pt-1 px-1 gif-hover d-none" src="/parallax/thumbnail.gif"/>
-                    <div class="pl-xl-4 pl-lg-2 pl-md-4 pt-2">
-                      <h5 class="card-title mb-2">Parallax</h5>
-                      <a href="/parallax" class="stretched-link"></a>
-                    </div>
-                </div>                
+                </div>               
 
                 <div class="card mb-3 mx-3 shadow-lg zoom bg-light">
                   <img class="card-img-top pt-1 px-1" src="/raytracer/thumbnail.jpg"/>
@@ -56,6 +47,14 @@
                     <div class="pl-xl-4 pl-lg-2 pl-md-4 pt-2">
                       <h5 class="card-title mb-2">A.S.P.E</h5>
                       <a href="/aspe" class="stretched-link"></a>
+                    </div>
+                </div>
+
+                <div class="card mb-3 mx-3 shadow-lg zoom bg-light">
+                  <img class="card-img-top pt-1 px-1" src="/augmented_model_visit/thumbnail.jpg"/>
+                    <div class="pl-xl-4 pl-lg-2 pl-md-4 pt-2">
+                      <h5 class="card-title mb-2">Augmented Model Visit</h5>
+                      <a href="/augmented_model_visit" class="stretched-link"></a>
                     </div>
                 </div>
 
@@ -104,11 +103,11 @@
               <h1>Parallax</h1>
 
                 <p>
-                  Ce prototype montre qu'il est possible d'obtenir un effet 3D en changeant le point de vue de la caméra selon la position des yeux d'une personne devant l'écran. 
+                  Ce prototype montre qu'il est possible d'obtenir un effet 3D en changeant le point de vue de la caméra selon la position des yeux d'une personne devant l'écran. Nous l'avons réalisé en binôme dans le cadre du master Gamagora.
                 </p>
 
                 <p>
-                  Le prototype est composé de deux scènes : une simple démonstration comprenant des objets à différentes distances, dont certains qui "sortent" de l'écran, et une scène mini-jeu. Dans le mini-jeu, le joueur doit faire varier son point de vue pour aligner certains objets et former des lettres pour découvrir le mot caché.
+                  Le prototype est composé de deux scènes : une simple démonstration comprenant des objets à différentes distances, dont certains qui "sortent" de l'écran, et une scène mini-jeu. Dans le mini-jeu, le joueur doit faire varier son point de vue pour aligner certains objets et former des lettres pour découvrir le mot caché (voir vidéo plus bas).
                 </p>
 
                 <div class="mb-3 pl-5 pr-4 text-center" onclick="toggleGif()">
@@ -129,19 +128,19 @@
                 </p>
 
                 <p>
-                  Dans ce protoype, la caméra dans Unity a un frustum bien particulier permettant d'avoir toujours la même zone en visuel. En déplaçant le point de vue en même temps que le visage de la personne devant l'écran, on obtient un effet assez convaincant de parallaxe. Pour la détection et le tracking du visage, nous avons utilisé la bibliothèque EmguCV, un wrapper d'OpenCV pour le C#. Pour filmer une démonstration, il a suffit de remplacer le face-tracking par un tracking se basant sur la couleur de mon téléphone portable.
+                  Dans ce protoype, la caméra dans Unity a un frustum bien particulier permettant d'avoir toujours la même zone en visuel. En déplaçant le point de vue en même temps que le visage de la personne devant l'écran, on obtient un effet assez convaincant de parallaxe. Pour la détection et le tracking du visage, nous avons utilisé la bibliothèque EmguCV, un wrapper d'OpenCV pour le C#, et un classificateur cascade. Pour filmer une démonstration, il a suffit de remplacer le face-tracking par un tracking se basant sur la couleur de mon téléphone portable.
                 </p>
 
-                <div class="embed-responsive embed-responsive-16by9">
+                <div class="ml-3 embed-responsive embed-responsive-16by9">
                   <iframe  src="https://www.youtube.com/embed/B_UIfFA77pk?start=33" allowfullscreen></iframe>
                 </div>
 
-                
-                <h3>Liens</h3>
+
+
+                <h3 class="mt-5">Liens</h3>
 
                 <p>
                   <a href="https://github.com/amauryfauvel/parallax" target="_blank" class="btn btn-outline-primary">Github</a>
-                  
                 </p>
                 
 
@@ -161,18 +160,6 @@
 </body>
 
 <script type="text/javascript">
-
-var gifs = document.getElementsByClassName("gif-hover");
-function enterGif(n) {
-  let i = n*2;
-  gifs[i].classList.add("d-none");
-  gifs[i+1].classList.remove("d-none");
-}
-function exitGif(n) {
-  let i = n*2;
-  gifs[i+1].classList.add("d-none");
-  gifs[i].classList.remove("d-none");
-}
 
 var isPlaying = true;
 function toggleGif() {
