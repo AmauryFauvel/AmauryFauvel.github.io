@@ -23,8 +23,8 @@ body {
 }
 
 .bg-grad-r, .bg-grad {
-	background-image: linear-gradient(to right, #0f1e36, #272f45, #3d4155, #535565, #696976);
-}
+ background-image: linear-gradient(to right, #00053b, #003b70, #0071a0, #23aac7, #71e4e9);
+ }
 
 .bg-grad-b {
 	background-image: linear-gradient(to bottom, #0f1e36, #272f45, #3d4155, #535565, #696976);
