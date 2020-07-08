@@ -59,10 +59,10 @@
                 </div>
 
                 <div class="card mb-3 mx-3 shadow-lg zoom bg-light">
-                  <img class="card-img-top pt-1 px-1" src="/vision_3d/thumbnail.jpg"/>
+                  <img class="card-img-top pt-1 px-1" src="/augmented_model_visit/thumbnail.jpg"/>
                     <div class="pl-xl-4 pl-lg-2 pl-md-4 pt-2">
-                      <h5 class="card-title mb-2">Vision 3D d'imagerie médicale</h5>
-                      <a href="/vision_3d" class="stretched-link"></a>
+                      <h5 class="card-title mb-2">Augmented Model Visit</h5>
+                      <a href="/augmented_model_visit" class="stretched-link"></a>
                     </div>
                 </div>
 
@@ -100,17 +100,11 @@
 
             <article class="col-10 col-xl-9 col-md-10 col-sm-10 col-xs-10 text-justify">
               
-              <h1>Augmented Model Visit</h1>
+              <h1>Vision 3D pour l'imagerie médicale</h1>
 
                 <p>
-                  Comment visiter un bâtiment qui n'est pas encore construit ? C'est la question à laquelle ce projet (réalisé en binôme) propose une réponse. Grâce à notre dispositif, le public peut se déplacer virtuellement dans le modèle 3D d'un édifice grâce à un contrôle intuitif : la maquette architecurale de ce bâtiment.
+                  J'ai effectué mon stage de fin de licences (4 mois) dans l'entreprise General Electrics Healthcare a Buc (78). Pendant ce stage j'ai intégré une équipe développant un SDK de rendu de données issues d'IRM et scanner. Ma mission a été d'adapter le SDK pour permettre la visualisation des images sur un écran 3D stéréoscopique (en collaboration avec l'entreprise italienn Real Vision). Un écran stéréoscopique permet de voir une image en 3D sans lunettes (comme une nintendo 3DS de 25 pouces).
                 </p>
-
-                <p>
-                  L'école urbaine de Lyon a organisé une semaine d'ateliers, débats et conférences autours de l'urbanisme : <strong>l'École de l'Anthropocène</strong>. Pendant toute la durée de cette semaine se déroulait un hackathon regroupant des étudiants et chercheurs de divers cursus (architecture, urbanisme, géographie, data science et jeux-vidéo). Le but était de proposer une expérience basée sur la maquette architecturale d'un futur bâtiment du campus de Bron afin de communiquer sur le projet.
-                </p>
-
-                
 
                 <p><a href="#tech" class="pl-0 py-0 btn btn-icon btn-outline-info btn-sm ml-3">
                 <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-down-square-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -118,46 +112,35 @@
                 </svg>
                 Aller directement à la partie technique</a></p>
 
-                <h2>Le maquette augmentée / Le principe</h2>
+                <h2>Le Fonctionnement</h2>
 
                 <p>
-                  La maquette a un toit plat et blanc, sur lequel nous projettons le plan d'un étage meublé. Sur ce toit est disposé un marqueur coloré, que l'utilisateur est invité à déplacer àa sa guise. À côte se trouve un grand écran montrant une vue 3D de l'intérieur du bâtiment, à l'endroit correspondant au positionnement du marqueur.
+                  L'application possède différents viewports : 3 pour visualiser les tranches volumétriques de l'IRM, et un pour avoir un rendu 3D du total.
+                  Comme l'écran stéréoscopique n'est arrivé qu'après 2 mois de stage, j'ai décidé de produire une permière version utilisant la méthode anaglyhpe (qui requiert des lunettes rouge-cyan). Pour produire une telle image il suffit de prendre deux images aux points de vues décalés de 6.5cm (une pour chaque œil) et d'en coder une sur le canal rouge du pixel, et l'autre sur les canaux vert et bleu. Dans les faits on préfère multiplier chaque pixel par une matrice de transformation dont les valeurs permettent à l'image finale de garder un peu de couleur.
+                </p>
+
+                <p>
+                  Avec l'écran stéréoscopique, il suffit d'envoyer une image 2 fois plus large quela résolution réelle de l'écran. L'écran divise l'image en deux et affiche une moitié pour chaque œil. Il faut donc utiliser 2 fenêtres sur 2 écrans différents : une fenêtre pour la partie 2D et les contrôles, et une fenêtre dédiée à l'écran stéréo.
                 </p>
                 
+
+
                 <div class="my-3 pl-5 pr-4">
-                  <img src="thumbnail.jpg" class="img-fluid border border-dark rounded"/>
-                  <p class="text-center pr-5"><small class="text-muted">La maquette augmentée en utilisation</small></p>
+                  <img src="algo.jpg" class="img-fluid border border-dark rounded"/>
+                  <p class="text-center pr-5"><small class="text-muted">Opération sur chaque pixel pour former l'image anaglyphe</small></p>
                 </div>
-                
-                
 
                 <h2 id="tech">La partie technique</h2>
 
                 <p>
-                  Deux appareils sont fixés au dessus de la maquette : un projecteur pour afficher le plan d'un étage sur le dessus de la maquette, et une caméra pour capturer la position du marqueur.
+                  Pour les nouveaux modes d'affichages (anaglyphe et stéréoscopique), Il a fallu étendre le renderer déjà présent dans le SDK front-end, de la manière la plus directe possible pour servir de modèle et de démonstration des ajouts possible au SDK.
+                </p>
+                <p>
+                  Mon application a aussi permis de démontrer certaines limites du SDK : comme la partie front-end est écrite en Typescript avec pour destination un navigateur, il était impossible d'ouvrir plusieurs fenêtres et d'en contrôler la taille et l'écran de destination. J'ai choisi d'utiliser Electron.js pour transformer ma première application navigateur en version desktop.
+
+                  Aussi, les requêtes d'images 3D au back-end était devenues 2 fois plus nombreuses avec la stéréoscopie, et le système de cache était devenu moins efficaces car les points de vues devaient désormais avoir des positions plus précises pour respecter l'alignement des yeux. Dans mon application j'ai fait en sorte de prégénérer une grande partie d'images qui constitueront les seuls points de vues possible par l'application. Cela a aussi permis de l'utiliser en étant hors ligne et a constitué une bonne démonstration de mock du composant chargé de faire les requêtes au back-end.
                 </p>
 
-                <p>
-                  Pour détecter le marqueur et sa position, nous utilisons la bibliothèque EmguCV : un wrapper d'OpenCV pour C# (dont Unity). Le contour du marqueur est repéré grâce à une détection de seuil HSV. La position du centre est ensuite transformée vers le système de coordonnées de Unity avec une matrice de projection et un changement de repère. Enfin, la caméra est déplacée fluidement (interpolation linéaire) vers sa nouvelle position pour correspondre à l'emplacement du marqueur.
-                </p>              
-
-                <p>
-                  Travaillant avec un temps et des ressources limitées, le seul modèle 3D du bâtiment auquel nous avions accès n'avait pas de texture, et des normales parallèles rendant le visuel peu lisible. Nous avons donc choisi de lui appliquer un shader affichant le contours des polygones. Le rendu est peu réaliste mais rend le bâtiment lisible, et ça a renforcé le côté "maquette".
-                </p>
-
-                <div class="my-3 pl-5 pr-4 text-center">
-                  <img src="overview.jpg" class="img-fluid border border-dark rounded"/>
-                  <p class="text-center pr-5"><small class="text-muted">Schéma du dispositif</small></p>
-                </div>
-                
-
-                
-                <h3 class="mt-5">Liens</h3>
-
-                <p>
-                  <a href="https://github.com/RymOUENZAR/Augmented-Model-Visit" target="_blank" class="btn btn-outline-primary">Github</a>
-                  
-                </p>
                 
 
             </article>

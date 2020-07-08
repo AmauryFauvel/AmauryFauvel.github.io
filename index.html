@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Marcellus+SC&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link href="style.css" rel="stylesheet"> 
+    <link href="style.css" rel="stylesheet">
 
 
     <title>Amaury Fauvel - Portfolio</title>
@@ -23,9 +23,9 @@
     <div class="jumbotron text-center text-white rounded-0 bg-grad pb-4">
         <h1 class="display-4 font1">Amaury Fauvel</h1>
         <hr class="my-4">
-        <p class="lead">Étudiant de master programmation de jeux-vidéo, je suis le stagiaire qu'il vous faut</p>
+        <p class="lead">I'm to become a Junior Game Programmer</p>
         
-        <p>It uses utility classes typography and spacing to space content out within the larger container.</p>
+        <p>Voici quelques uns des mes projets personnels, étudiant. et professionnels.</p>
         <p class="lead mt-4 mb-0">
           <a class="text-light btn" href="https://github.com/AmauryFauvel">
             <i class="fa fa-github" aria-hidden="true" style="font-size:76px;"></i>
@@ -89,7 +89,7 @@
                 Un moteur de raytracing pour la synthèse d'images. Simulation physique des rayons de lumière.
                 <br/><i class="text-muted float-right">C++</i>
               </p>
-              <a href="/raytracer" class="stretched-link"></a>
+              <a href="https://github.com/AmauryFauvel/raytracer-cpp" target="_blank" class="stretched-link"></a>
             </div>
           </div>
         </div>
@@ -105,7 +105,7 @@
                 Un moteur de jeu 2D implémentant tilemap, spritesheet, et render distance pour des grands niveaux.
                 <br/><i class="text-muted float-right">C++, SFML</i>
               </p>
-              <a href="/aspe" class="stretched-link"></a>
+              <a href="https://github.com/AmauryFauvel/aspe" target="_blank" class="stretched-link"></a>
             </div>
           </div>
         </div>
@@ -153,7 +153,7 @@
                 Deux jeux réalisés en équipe en 2 et 3 jours. Un jeu d'arcade (1 contre 1) et un puzzle platformer.
                 <br/><i class="text-muted float-right">Unity, C#</i>
               </p>
-              <a href="/game_jam" class="stretched-link"></a>
+              <a href="https://ldjam.com/events/ludum-dare/42/blockstep" target="_blank"  class="stretched-link"></a>
             </div>
           </div>
         </div>
@@ -169,7 +169,7 @@
                 Une plateforme web de jeux de sociétés avec parties en différé (état de la partie stocké en base de données).
                 <br/><i class="text-muted float-right">PHP, Symfony, Javascript<i>
               </p>
-              <a href="/agora" class="stretched-link"></a>
+              <a href="http://agora-online.univ-rouen.fr/" target="_blank" class="stretched-link"></a>
             </div>
           </div>
         </div>
@@ -182,19 +182,6 @@
 </main>
 </body>
 
-<script type="text/javascript">
-
-var gifs = document.getElementsByClassName("gif-hover");
-function enterGif(n) {
-  let i = n*2;
-  gifs[i].classList.add("d-none");
-  gifs[i+1].classList.remove("d-none");
-}
-function exitGif(n) {
-  let i = n*2;
-  gifs[i+1].classList.add("d-none");
-  gifs[i].classList.remove("d-none");
-}
-</script>
+<script type="text/javascript" src="/gif_hover.js"></script>
 
 </html>
